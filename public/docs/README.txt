@@ -1,0 +1,11 @@
+PDF bundle (enterprise exports)
+
+- DigiEmu_Core_Specification_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Governance_Framework_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Security_Model_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Audit_Verification_Framework_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Threat_Model_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Certification_Technical_Requirements_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Deployment_Operational_Guidelines_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Determinism_Formal_Definition_v1_0_ENTERPRISE.pdf
+- DigiEmu_Core_Conformance_Requirements_v1_0_ENTERPRISE.pdf
