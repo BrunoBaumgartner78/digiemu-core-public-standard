@@ -11,12 +11,12 @@ export const links = {
   githubCore: "https://github.com/BrunoBaumgartner78/digiemu-core",
 
   // docs page (if you add one later) – for now keep it simple:
-  docsPage: "/reference",
+  docsPage: "/docs",
 
   // artifact shortcuts used in Footer badges
   artifacts: {
     testStrategy: "/docs#test-strategy",
-    verifyAuditSpec: "/docs/DigiEmu_Core_Audit_Verification_Framework_v1_0_ENTERPRISE.pdf",
+    verifyAuditSpec: "/docs#verify-audit-spec",
     decLog: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/tree/main/01_decisions",
 },
 
