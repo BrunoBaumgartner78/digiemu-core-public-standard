@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "check:placeholders": "node scripts/check-placeholders.cjs",
-    "dev": "next dev",
+    "dev": "next dev --turbo=false",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -24,4 +23,5 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   }
+  
 }
