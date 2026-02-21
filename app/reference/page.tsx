@@ -69,7 +69,7 @@ function CodeBlock({ children }: { children: string }) {
 
 function DownloadDocx({
   href,
-  label = "Download DOCX",
+  label = "Download",
 }: {
   href: string;
   label?: string;
@@ -82,19 +82,49 @@ function DownloadDocx({
     >
       {label}
       <span className="ml-2 rounded-full border border-black/10 bg-white px-2 py-0.5 text-[10px] text-black/50">
-        DRAFT
+        V1.0
       </span>
     </a>
   );
 }
 
 const auditArtifacts = [
-  { title: "Specification", right: "Normative", body: "...", href: links.docs.specification },
-  { title: "Determinism (Formal)", right: "Evidence", body: "...", href: links.docs.determinismFormal },
-  { title: "Audit Framework", right: "Mechanics", body: "...", href: links.docs.auditFramework },
-  { title: "Conformance", right: "MUST/SHALL", body: "...", href: links.docs.conformance },
-  { title: "Certification", right: "Policy", body: "...", href: links.docs.certification },
-  { title: "Governance", right: "Process", body: "...", href: links.docs.governance },
+  {
+    title: "Specification",
+    right: "Normative",
+    body: "Authoritative definition of data formats, snapshot semantics, and verification APIs.",
+    href: links.docs.specification,
+  },
+  {
+    title: "Determinism (Formal)",
+    right: "Evidence",
+    body: "Formal definition of determinism, replay invariants, and reproducibility guarantees.",
+    href: links.docs.determinismFormal,
+  },
+  {
+    title: "Audit Framework",
+    right: "Mechanics",
+    body: "Procedures for capturing, storing, and validating audit evidence and decision provenance.",
+    href: links.docs.auditFramework,
+  },
+  {
+    title: "Conformance",
+    right: "MUST/SHALL",
+    body: "Testable requirements and acceptance criteria implementers must meet for compliance.",
+    href: links.docs.conformance,
+  },
+  {
+    title: "Certification",
+    right: "Policy",
+    body: "Technical evidence and assessment steps used during certification and audits.",
+    href: links.docs.certification,
+  },
+  {
+    title: "Governance",
+    right: "Process",
+    body: "Roles, change control, and release practices that ensure traceability and accountability.",
+    href: links.docs.governance,
+  },
 
   { title: "Security Model", right: "Model", body: "Threat assumptions and protection goals.", href: links.docs.securityModel },
   { title: "Threat Model", right: "Model", body: "Adversaries, attack surfaces and mitigations.", href: links.docs.threatModel },
@@ -221,7 +251,7 @@ export default function ReferencePage() {
               <h2 className="text-base font-semibold text-black">Audit artifacts</h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-black/70">
                 These artifacts define the verification mechanics, test expectations, and
-                decision provenance. Drafts are published as downloadable DOCX while the
+                decision provenance. Drafts are published as downloadable PDF while the
                 public spec stabilizes.
               </p>
 

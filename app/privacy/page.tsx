@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                     IP address, date/time, requested URL, user agent, referrer, and status code.
                   </li>
                   <li>
-                    <span className="font-semibold text-black">Downloads</span> (DOCX):
+                    <span className="font-semibold text-black">Downloads</span>:
                     when you download documents, the request may be logged as part of standard server operation.
                   </li>
                 </ul>

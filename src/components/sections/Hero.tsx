@@ -17,8 +17,9 @@ export function Hero() {
       <div className={["relative mx-auto w-full", ui.layout.max, ui.layout.px].join(" ")}>
         {/* Watermark Globe */}
         <div className="pointer-events-none absolute -top-56 right-[-18rem] sm:-top-72 sm:right-[-22rem] lg:-top-80 lg:right-[-26rem] opacity-10 group-hover:opacity-50 transition-opacity duration-500">
-          <GlobeSVG strokeClassName="stroke-sky-300/45"
+          <GlobeSVG
             className={[
+              "stroke-sky-300/45",
               "h-[900px] w-[900px] lg:h-[1100px] lg:w-[1100px]",
               "transition-opacity duration-200",
               rotation,

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 function isTypingInInput(target: EventTarget | null) {
   const el = target as HTMLElement | null;
@@ -17,17 +17,29 @@ export function EasterEggProvider({ children }: { children: React.ReactNode }) {
     document.body.classList.toggle("egg-red", on);
   };
 
-  const trigger = (ms = 12_000) => {
+  const trigger = useCallback((ms = 12_000) => {
     setRed(true);
     if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
     timeoutRef.current = window.setTimeout(() => setRed(false), ms);
-  };
+  }, []);
 
-  const toggle = () => {
+  const toggle = useCallback(() => {
     const on = !document.body.classList.contains("egg-red");
     setRed(on);
     if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
-  };
+  }, []);
+
+  // Refs that always point to the latest callbacks for use in event listeners
+  const triggerRef = useRef(trigger);
+  const toggleRef = useRef(toggle);
+
+  useEffect(() => {
+    triggerRef.current = trigger;
+  }, [trigger]);
+
+  useEffect(() => {
+    toggleRef.current = toggle;
+  }, [toggle]);
 
   // Secret typing: "xxx" (or "redpearl")
   useEffect(() => {
@@ -41,7 +53,7 @@ export function EasterEggProvider({ children }: { children: React.ReactNode }) {
 
       buf = (buf + k).slice(-16).toLowerCase();
       if (buf.includes("xxx") || buf.includes("redpearl")) {
-        trigger();
+        triggerRef.current();
         buf = "";
       }
     };
@@ -69,7 +81,7 @@ export function EasterEggProvider({ children }: { children: React.ReactNode }) {
       const now = Date.now();
       if (mag > THRESHOLD && now - last > 900) {
         last = now;
-        trigger();
+        triggerRef.current();
       }
     };
 
@@ -89,7 +101,7 @@ export function EasterEggProvider({ children }: { children: React.ReactNode }) {
 
       const now = Date.now();
       if (now - lastTapRef.current < 320) {
-        toggle();
+        toggleRef.current();
         lastTapRef.current = 0;
       } else {
         lastTapRef.current = now;

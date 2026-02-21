@@ -69,12 +69,14 @@ export function MobileNav({
   };
 
   const itemClass = (active: boolean) =>
-  [
-    "relative rounded-xl px-3 py-2 text-sm transition hover:bg-black/[0.05]",
-    active
-      ? "!text-blue-600 !font-semibold before:absolute before:left-0 before:top-1/2 before:h-4 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-blue-500"
-      : "text-black/80 hover:text-black",
-  ].join(" ");
+    [
+      "relative rounded-xl px-3 py-2 text-sm transition",
+      // hover surface should work in both themes
+      "hover:bg-[color:color-mix(in oklab,var(--fg) 6%,transparent)]",
+      active
+        ? "!text-blue-600 !font-semibold before:absolute before:left-0 before:top-1/2 before:h-4 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-blue-500"
+        : "text-[color:color-mix(in oklab,var(--fg) 82%,transparent)] hover:text-[color:var(--fg)]",
+    ].join(" ");
 
 
   return (
@@ -82,7 +84,7 @@ export function MobileNav({
       {/* ✅ Menu button: text-only (no bg/border) */}
       <button
         type="button"
-        className="text-sm font-medium text-black/70 hover:text-black"
+        className="text-sm font-medium text-[color:color-mix(in oklab,var(--fg) 70%,transparent)] hover:text-[color:var(--fg)]"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls="mobile-menu"
@@ -95,7 +97,7 @@ export function MobileNav({
           id="mobile-menu"
           role="menu"
           aria-label="Mobile navigation"
-          className="absolute right-0 top-[calc(100%+10px)] z-50 w-56 overflow-hidden rounded-2xl border border-black/10 bg-white/95 p-2 shadow-lg backdrop-blur"
+          className="absolute right-0 top-[calc(100%+10px)] z-50 w-56 overflow-hidden rounded-2xl border border-black/10 bg-[color:var(--card)] p-2 shadow-lg backdrop-blur"
         >
           <div className="flex flex-col">
             {nav.map((item) => {
@@ -113,7 +115,7 @@ export function MobileNav({
               );
             })}
 
-            <div className="my-1 h-px bg-black/10" />
+            <div className="my-1 h-px bg-[color:color-mix(in oklab,var(--fg) 12%,transparent)]" />
 
             <SmartLink
               href={githubHref}

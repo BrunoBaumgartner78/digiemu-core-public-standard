@@ -154,7 +154,7 @@ export default function SpecPage() {
                   </div>
 
                   <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
-                    <h2 className="text-base font-semibold text-black">Normative references (DOCX)</h2>
+                    <h2 className="text-base font-semibold text-black">Normative references (PDF)</h2>
                     <p className="mt-2 text-sm leading-relaxed text-black/70">
                       The public documentation suite provides the formal specification and the conformance
                       boundaries for deterministic replay and verification.
@@ -166,7 +166,7 @@ export default function SpecPage() {
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Specification v1.0</div>
-                        <div className="mt-1 text-xs text-black/50">Download DOCX</div>
+                        <div className="mt-1 text-xs text-black/50">Download PDF</div>
                       </a>
 
                       <a
@@ -174,7 +174,7 @@ export default function SpecPage() {
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Determinism (Formal) v1.0</div>
-                        <div className="mt-1 text-xs text-black/50">Download DOCX</div>
+                        <div className="mt-1 text-xs text-black/50">Download PDF</div>
                       </a>
 
                       <a
@@ -182,7 +182,7 @@ export default function SpecPage() {
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Conformance Requirements v1.0</div>
-                        <div className="mt-1 text-xs text-black/50">Download DOCX</div>
+                        <div className="mt-1 text-xs text-black/50">Download PDF</div>
                       </a>
 
                       <a
@@ -190,12 +190,12 @@ export default function SpecPage() {
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Certification Requirements v1.0</div>
-                        <div className="mt-1 text-xs text-black/50">Download DOCX</div>
+                        <div className="mt-1 text-xs text-black/50">Download PDF</div>
                       </a>
                     </div>
 
                     <p className="mt-4 text-xs leading-relaxed text-black/50">
-                      Note: Download links serve DOCX files from <code>public/docs</code>.
+                      Note: Download links serve PDF files from <code>public/docs</code>.
                     </p>
                   </div>
                 </div>

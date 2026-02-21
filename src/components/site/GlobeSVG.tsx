@@ -1,8 +1,6 @@
 import * as React from "react";
 
-type Props = React.SVGProps<SVGSVGElement> & {
-  strokeClassName?: string; // e.g. "stroke-black/10" or "stroke-blue-200/60"
-};
+// Simplified: accept only `className` so consumers control stroke via Tailwind
 
 /**
  * Geometrically consistent globe:
@@ -11,11 +9,7 @@ type Props = React.SVGProps<SVGSVGElement> & {
  * - Latitudes are scaled circles around the same center
  * This eliminates tiny mismatches at intersections when resized.
  */
-export default function GlobeSVG({
-  strokeClassName = "stroke-black/10",
-  className,
-  ...props
-}: Props) {
+export default function GlobeSVG({ className }: { className?: string }) {
   const C = 300; // center
   const R = 260; // radius
 
@@ -26,22 +20,8 @@ export default function GlobeSVG({
   const meridianAngles = [0, 30, 60, 90, 120, 150]; // enough density without clutter
 
   return (
-    <svg
-      viewBox="0 0 600 600"
-      width="600"
-      height="600"
-      aria-hidden="true"
-      className={className}
-      shapeRendering="geometricPrecision"
-      {...props}
-    >
-      <g
-        fill="none"
-        className={strokeClassName}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+    <svg viewBox="0 0 600 600" width="600" height="600" aria-hidden="true" className={className} shapeRendering="geometricPrecision">
+      <g fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         {/* Outer sphere */}
         <circle cx={C} cy={C} r={R} />
 
