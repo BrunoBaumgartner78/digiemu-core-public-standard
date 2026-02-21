@@ -162,7 +162,7 @@ export default function SpecPage() {
 
                     <div className="mt-4 grid gap-3 sm:grid-cols-2">
                       <a
-                        href="/docs/DigiEmu_Core_Specification_v1_0_ENTERPRISE.pdf"
+                        href={links.docs.specification}
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Specification v1.0</div>
@@ -170,7 +170,7 @@ export default function SpecPage() {
                       </a>
 
                       <a
-                        href="/docs/DigiEmu_Core_Determinism_Formal_Definition_v1_0_ENTERPRISE.pdf"
+                        href={links.docs.determinismFormal}
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Determinism (Formal) v1.0</div>
@@ -178,7 +178,7 @@ export default function SpecPage() {
                       </a>
 
                       <a
-                        href="/docs/DigiEmu_Core_Conformance_Requirements_v1_0_ENTERPRISE.pdf"
+                        href={links.docs.conformance}
                         className="rounded-2xl border border-black/10 bg-white p-4 text-sm text-black hover:bg-black/5"
                       >
                         <div className="font-semibold">Conformance Requirements v1.0</div>

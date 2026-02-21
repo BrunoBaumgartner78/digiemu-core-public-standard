@@ -15,8 +15,8 @@ export const links = {
 
   // artifact shortcuts used in Footer badges
   artifacts: {
-    testStrategy: "/docs/05_DigiEmu_Core_Test_Strategy_v1.0.pdf",
-    verifyAuditSpec: "/docs/04_DigiEmu_Core_Audit_Framework_v1.0.pdf",
+    testStrategy: "/docs#test-strategy",
+    verifyAuditSpec: "/docs/DigiEmu_Core_Audit_Verification_Framework_v1_0_ENTERPRISE.pdf",
     decLog: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/tree/main/01_decisions",
 },
 
