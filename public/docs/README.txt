@@ -1,5 +1,9 @@
-PDF bundle (enterprise exports)
 
+DigiEmu Core — Public Standard Documents
+
+This folder contains the public PDF artifacts referenced by digiemu.com.
+
+PDFs:
 - DigiEmu_Core_Specification_v1_0_ENTERPRISE.pdf
 - DigiEmu_Core_Governance_Framework_v1_0_ENTERPRISE.pdf
 - DigiEmu_Core_Security_Model_v1_0_ENTERPRISE.pdf
