@@ -19,7 +19,7 @@ function Card({
   right?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+    <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_1px_0_rgba(0,0,0,0.04)] min-w-0">
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-base font-semibold text-black">{title}</h3>
         {right ? <div className="text-xs text-black/50">{right}</div> : null}
@@ -61,7 +61,7 @@ function Step({
 
 function CodeBlock({ children }: { children: string }) {
   return (
-    <pre className="mt-3 overflow-x-auto rounded-2xl border border-black/10 bg-white px-4 py-3 text-xs leading-relaxed text-black/80 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+    <pre className="mt-3 max-w-full overflow-x-auto whitespace-pre-wrap break-words rounded-2xl border border-black/10 bg-white px-4 py-3 text-xs leading-relaxed text-black/80 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
       <code>{children}</code>
     </pre>
   );
@@ -150,14 +150,14 @@ export default function ReferencePage() {
                 Reference & Verification
               </h1>
 
-              <p className="max-w-3xl text-base leading-relaxed text-black/70">
+              <p className="max-w-6xl text-base leading-relaxed text-black/70">
                 The goal is independent verification: a third party can reconstruct a
                 knowledge state from referenced inputs and confirm the expected SHA-256
                 snapshot hash. Same inputs → same reconstructed state → same hash.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-4 lg:grid-cols-2">
+            <div className="mt-10 grid gap-4 lg:grid-cols-2 min-w-0">
               <Card title="Verify in 60 seconds" right={<span>Workflow</span>}>
                 <p>
                   This is the minimal verification loop. It is intentionally simple and
@@ -249,7 +249,7 @@ export default function ReferencePage() {
 
             <div className="mt-10">
               <h2 className="text-base font-semibold text-black">Audit artifacts</h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-black/70">
+              <p className="mt-2 max-w-6xl text-sm leading-relaxed text-black/70">
                 These artifacts define the verification mechanics, test expectations, and
                 decision provenance. Drafts are published as downloadable PDF while the
                 public spec stabilizes.
