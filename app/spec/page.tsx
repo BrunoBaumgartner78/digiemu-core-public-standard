@@ -201,6 +201,105 @@ export default function SpecPage() {
                 </div>
               </div>
             </section>
+
+            {/* --- Public Standard Synchronization: v1.0 Release Line (cryptographically anchored) --- */}
+            <section id="release-anchors" className="mt-12 scroll-mt-24">
+              <div className={[["mx-auto w-full", ui.layout.max, ui.layout.px].join(" ")].join(" ") }>
+                <h2 className="text-xl font-semibold tracking-tight text-black">Release Anchors</h2>
+                <p className="mt-2 max-w-3xl text-sm text-black/70">
+                  The v1.0 release line is defined by a normative baseline tag and a signed patch line.
+                  This page mirrors the cryptographic release line as published in the reference repository.
+                </p>
+
+                <div className="mt-4 rounded-2xl border border-black/10 bg-white p-5">
+                  <div className="text-sm font-semibold text-black">Normative baseline</div>
+                  <div className="mt-1 font-mono text-sm text-black">{links.releaseLine.baseline}</div>
+
+                  <div className="mt-4 text-sm font-semibold text-black">Signed patch line</div>
+                  <ul className="mt-2 space-y-1 font-mono text-sm text-black">
+                    {links.releaseLine.patches.map((t) => (
+                      <li key={t}>{t}</li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-4 text-sm font-semibold text-black">GitHub</div>
+                  <ul className="mt-2 space-y-1 text-sm">
+                    <li>
+                      <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.releases}>
+                        Releases
+                      </a>
+                    </li>
+                    <li>
+                      <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.tags}>
+                        Tags
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="cryptographic-integrity" className="mt-12 scroll-mt-24">
+              <div className={[["mx-auto w-full", ui.layout.max, ui.layout.px].join(" ")].join(" ") }>
+                <h2 className="text-xl font-semibold tracking-tight text-black">Cryptographic Integrity</h2>
+                <p className="mt-2 max-w-3xl text-sm text-black/70">
+                  All release tags in the v1.0 line are signed. Independent verification is performed with Git tag signature
+                  checks against the published public key.
+                </p>
+
+                <div className="mt-4 rounded-2xl border border-black/10 bg-white p-5">
+                  <div className="text-sm font-semibold text-black">Public signing key</div>
+                  <div className="mt-2 text-sm">
+                    <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.keysReadme}>
+                      KEYS README
+                    </a>
+                    <span className="text-black/50"> • </span>
+                    <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.keyAsc}>
+                      Public key (ASC)
+                    </a>
+                    <span className="text-black/50"> • </span>
+                    <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.verifying}>
+                      VERIFYING.md
+                    </a>
+                  </div>
+
+                  <div className="mt-4 text-sm font-semibold text-black">Fingerprint</div>
+                  <div className="mt-1 rounded-xl border border-black/10 bg-black/5 p-3 font-mono text-xs text-black">
+                    {links.coreReference.fingerprint}
+                  </div>
+
+                  <div className="mt-4 text-sm font-semibold text-black">Verify locally</div>
+                  <pre className="mt-2 overflow-x-auto rounded-xl border border-black/10 bg-black/5 p-3 text-xs text-black">{`git tag -v ${links.releaseLine.baseline}
+            git tag -v ${links.releaseLine.patches[links.releaseLine.patches.length - 1]}`}</pre>
+
+                  <p className="mt-2 text-xs text-black/60">
+                    Verification uses Git’s built-in signature checks. The public key and fingerprint are published in the reference repository.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="audit-status" className="mt-12 scroll-mt-24">
+              <div className={[["mx-auto w-full", ui.layout.max, ui.layout.px].join(" ")].join(" ") }>
+                <h2 className="text-xl font-semibold tracking-tight text-black">Audit Status</h2>
+                <p className="mt-2 max-w-3xl text-sm text-black/70">
+                  v1.0 is cryptographically anchored and audit-traceable.
+                </p>
+
+                <div className="mt-4 rounded-2xl border border-black/10 bg-white p-5">
+                  <div className="text-sm font-semibold text-black">Audit statement</div>
+                  <div className="mt-2 text-sm">
+                    <a className="underline underline-offset-4 hover:opacity-80" href={links.coreReference.auditStatement}>
+                      AUDIT_STATEMENT_v1.0.md
+                    </a>
+                  </div>
+
+                  <div className="mt-4 text-xs text-black/60">
+                    This website does not mint releases. It mirrors the cryptographic release line as published in the reference repository.
+                  </div>
+                </div>
+              </div>
+            </section>
       </>
   );
 }

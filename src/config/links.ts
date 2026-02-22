@@ -16,9 +16,27 @@ export const links = {
   // artifact shortcuts used in Footer badges
   artifacts: {
     testStrategy: "/docs#test-strategy",
-    verifyAuditSpec: "/docs#verify-audit-spec",
+    verifyAuditSpec: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/docs/AUDIT_STATEMENT_v1.0.md",
     decLog: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/tree/main/01_decisions",
-},
+  },
+
+  // core reference repository + cryptographic anchors
+  coreReference: {
+    repo: "https://github.com/BrunoBaumgartner78/digiemu-core-reference",
+    releases: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/releases",
+    tags: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/tags",
+    keysReadme: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/spec/v1.0/KEYS/README.md",
+    keyAsc: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/spec/v1.0/KEYS/bruno_brainbloom.asc",
+    verifying: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/VERIFYING.md",
+    auditStatement: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/docs/AUDIT_STATEMENT_v1.0.md",
+    fingerprint: "DCB7 228C 6EC8 BE4A CB9E  049D 0F75 05E1 2685 E8A2",
+  },
+
+  // release-line constants mirrored from the reference repo
+  releaseLine: {
+    baseline: "spec-v1.0",
+    patches: ["spec-v1.0.1", "spec-v1.0.2", "spec-v1.0.3"],
+  },
 
  
   // ...
