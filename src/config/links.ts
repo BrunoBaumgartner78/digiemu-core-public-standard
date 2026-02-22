@@ -27,7 +27,7 @@ export const links = {
     tags: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/tags",
     keysReadme: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/spec/v1.0/KEYS/README.md",
     keyAsc: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/spec/v1.0/KEYS/bruno_brainbloom.asc",
-    verifying: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/VERIFYING.md",
+    verifying: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/spec/v1.0/VERIFYING.md",
     auditStatement: "https://github.com/BrunoBaumgartner78/digiemu-core-reference/blob/main/docs/AUDIT_STATEMENT_v1.0.md",
     fingerprint: "DCB7 228C 6EC8 BE4A CB9E  049D 0F75 05E1 2685 E8A2",
   },
