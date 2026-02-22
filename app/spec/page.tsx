@@ -3,7 +3,7 @@ import { Card } from "../../src/components/site/Card";
 import { Pill } from "../../src/components/site/Pill";
 import { SmartLink } from "../../src/components/site/SmartLink";
 import { ui } from "../../src/config/ui";
-import { links } from "../../src/config/links";
+import { links } from "@/config/links";
 
 const defs = [
   { term: "Unit", body: "A versioned knowledge object. Units are the stable building blocks referenced by snapshots." },
