@@ -52,7 +52,12 @@ export const links = {
   conformance: "/docs/DigiEmu_Core_Conformance_Requirements_v1_0_ENTERPRISE.pdf",
 },
 
-
+  // core artifact shortcuts (public spec integration)
+  specV1: "https://github.com/BrunoBaumgartner78/digiemu-core/tree/main/docs",
+  cliContractV1Tag: "https://github.com/BrunoBaumgartner78/digiemu-core/releases/tag/cli-contract-v1.0.0",
+  verifySchema: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/VERIFY_RESULT_SCHEMA_v1.json",
+  snapshotBundleSpec: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/SNAPSHOT_BUNDLE_v1.0.md",
+  versioningPolicy: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/VERSIONING_POLICY_v1.0.md",
 
 
 } as const;
