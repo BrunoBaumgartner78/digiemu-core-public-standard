@@ -1,6 +1,5 @@
 import fs from "fs/promises";
 import path from "path";
-import React from "react";
 import { Section } from "@/components/site/Section";
 import { SmartLink } from "@/components/site/SmartLink";
 import { links } from "@/config/links";
