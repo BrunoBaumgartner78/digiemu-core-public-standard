@@ -1,6 +1,6 @@
 # DigiEmu Core — SPEC v1.0 (Public)
 
-- Status: DRAFT (public)
+- Status: PUBLIC-RELEASE-CANDIDATE (public)
 - Source of truth: digiemu-core tags + schemas
 
 ## 1) Scope
