@@ -43,6 +43,19 @@
 ## 10) Governance & Conformance
 - Conformance claims MUST reference specific tags/schemas.
 - Governance decisions SHOULD be captured as decision records (DEC-*), linked from public documentation where applicable.
+ 
+## FINAL Publication Criteria
+
+- SPEC v1.0 MAY be promoted from PUBLIC-RELEASE-CANDIDATE to FINAL only if:
+	- Canonical JSON v1 semantics remain unchanged.
+	- Hash v1 definition (sha256(canonical_json_v1)) remains unchanged.
+	- Replay v1 behavior remains deterministic and version-stable.
+	- Verify v1 output remains fully conformant to VERIFY_RESULT_SCHEMA_v1.json.
+	- The referenced CLI contract tag remains valid and reproducible.
+
+- Any modification affecting Canonical JSON v1, Hash v1, Replay v1, or Verify v1 semantics MUST require:
+	- A new release candidate cycle, OR
+	- A new minor or major SPEC version.
 
 ## Release Candidate Notes
 - This document is published as a PUBLIC-RELEASE-CANDIDATE (public).
@@ -55,6 +68,18 @@
 - Issue reporting SHOULD be done via the public repositories:
 	- digiemu-core (spec + verifier/CLI contract)
 	- digiemu-core-public-standard (site rendering + published documents)
+
+## Conformance Claim Requirements
+
+- An implementation claiming conformance to SPEC v1.0 MUST:
+	- Explicitly reference the exact SPEC version (including tag).
+	- Explicitly reference the CLI contract tag used.
+	- Explicitly reference VERIFY_RESULT_SCHEMA_v1.json.
+	- Provide a Verify v1 output artifact conforming to the published schema.
+
+- Conformance claims MUST be reproducible by independent parties using the referenced tags and artifacts.
+
+- Failure to provide reproducible verification artifacts invalidates the conformance claim.
 
 ## References
 - Git tag: cli-contract-v1.0.0

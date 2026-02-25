@@ -53,11 +53,11 @@ export const links = {
 },
 
   // core artifact shortcuts (public spec integration)
-  specV1: "https://github.com/BrunoBaumgartner78/digiemu-core/tree/main/docs",
+  specV1: "https://github.com/BrunoBaumgartner78/digiemu-core/tree/cli-contract-v1.0.0/docs",
   cliContractV1Tag: "https://github.com/BrunoBaumgartner78/digiemu-core/tag/cli-contract-v1.0.0",
-  verifySchema: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/VERIFY_RESULT_SCHEMA_v1.json",
-  snapshotBundleSpec: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/SNAPSHOT_BUNDLE_v1.0.md",
-  versioningPolicy: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/main/docs/VERSIONING_POLICY_v1.0.md",
+  verifySchema: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/cli-contract-v1.0.0/docs/VERIFY_RESULT_SCHEMA_v1.json",
+  snapshotBundleSpec: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/cli-contract-v1.0.0/docs/SNAPSHOT_BUNDLE_v1.0.md",
+  versioningPolicy: "https://github.com/BrunoBaumgartner78/digiemu-core/blob/cli-contract-v1.0.0/docs/VERSIONING_POLICY_v1.0.md",
 
 
 } as const;
