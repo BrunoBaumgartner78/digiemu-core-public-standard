@@ -44,6 +44,18 @@
 - Conformance claims MUST reference specific tags/schemas.
 - Governance decisions SHOULD be captured as decision records (DEC-*), linked from public documentation where applicable.
 
+## Release Candidate Notes
+- This document is published as a PUBLIC-RELEASE-CANDIDATE (public).
+- The following artifacts are considered locked for this release candidate and MUST be referenced by conformance claims:
+	- CLI contract tag: cli-contract-v1.0.0
+	- VERIFY_RESULT_SCHEMA_v1.json
+- The following may still change prior to a final SPEC v1.0 publication:
+	- Explanatory text, examples, and editorial structure (without changing normative requirements)
+	- Additional clarifications that do not modify Canonical JSON v1, Hash v1, Replay v1, or Verify v1 semantics
+- Issue reporting SHOULD be done via the public repositories:
+	- digiemu-core (spec + verifier/CLI contract)
+	- digiemu-core-public-standard (site rendering + published documents)
+
 ## References
 - Git tag: cli-contract-v1.0.0
 - VERIFY_RESULT_SCHEMA_v1.json
