@@ -25,7 +25,7 @@ export default async function Page() {
           <h1 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">SPEC v1.0 — DigiEmu Core Public Standard</h1>
 
           <div className="mt-3 inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-medium text-black/70">
-            PUBLIC-RELEASE-CANDIDATE (public)
+            FINAL (public)
           </div>
 
           <p className="mt-3 max-w-3xl text-black/70">deterministic knowledge state reconstruction, snapshot-verifiable</p>
