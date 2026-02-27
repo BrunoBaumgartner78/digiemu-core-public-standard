@@ -208,11 +208,20 @@ export default function ReferencePage() {
                 </div>
               </Card>
 
-              <Card title="CLI placeholder (example)" right={<span>Marked as placeholder</span>}>
+              <Card title="CLI Contract v1 (reference interface)" right={<span>Defined by tag: cli-contract-v1.0.0</span>}>
                 <p>
-                  This snippet is a placeholder interface example. It documents the
-                  expected shape of a verification tool without claiming a finalized CLI.
+                  This interface reflects the locked CLI contract v1. It documents the normative input/output shape and does not imply a distributed binary release.
                 </p>
+
+                <div className="mt-3">
+                  <SmartLink
+                    href={links.cliContractV1Tag}
+                    external
+                    className="inline-flex items-center rounded-xl border border-black/15 bg-white px-3 py-1 text-sm text-black hover:bg-black/5"
+                  >
+                    cli-contract-v1.0.0 (tag)
+                  </SmartLink>
+                </div>
 
                 <CodeBlock>
                   {[
