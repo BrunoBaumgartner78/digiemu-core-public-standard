@@ -91,7 +91,7 @@ export default function SpecPage() {
           </Card>
 
           <Card className={[ui.card.pad, "mt-4"].join(" ")}>
-            <div className="text-sm text-black/50">CLI (placeholder)</div>
+            <div className="text-sm text-black/50">CLI Contract v1</div>
             <div className="mt-3 text-xs text-black/70">Not published — illustrative only.</div>
           </Card>
         </div>
