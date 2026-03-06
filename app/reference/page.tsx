@@ -208,6 +208,32 @@ export default function ReferencePage() {
                 </div>
               </Card>
 
+              <Card title="Verification Example" right={<span>Illustrative public flow</span>}>
+                <div className="space-y-4">
+                  <p className="text-sm leading-6 text-black/70">
+                    A minimal public example of the verification flow. Independent implementations
+                    performing deterministic replay must obtain the identical snapshot hash.
+                  </p>
+
+                  <div className="overflow-x-auto rounded-2xl border border-black/10 bg-black px-4 py-4">
+                    <pre className="text-sm leading-6 text-white/90">
+{`$ digiemu verify demo_bundle_v1.json
+
+Snapshot: 9c6a1e4e8d5c...
+Computed: 9c6a1e4e8d5c...
+
+Result: PASS`}
+                    </pre>
+                  </div>
+
+                  <p className="text-sm leading-6 text-black/60">
+                    This example is illustrative and shows the expected public verification shape:
+                    select inputs, replay deterministically, compute the canonical SHA-256 state hash,
+                    compare against the expected snapshot, and emit a result.
+                  </p>
+                </div>
+              </Card>
+
               <Card title="CLI Contract v1 (reference interface)" right={<span>Defined by tag: cli-contract-v1.0.0</span>}>
                 <p>
                   This interface reflects the locked CLI contract v1. It documents the normative input/output shape and does not imply a distributed binary release.
