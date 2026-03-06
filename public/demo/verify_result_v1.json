@@ -1,0 +1,8 @@
+{
+  "verify_version": "v1",
+  "snapshot": "9c6a1e4e8d5c000demo000000000000000000000000000000000000000000",
+  "computed_hash": "9c6a1e4e8d5c000demo000000000000000000000000000000000000000000",
+  "result": "PASS",
+  "verified_at": "2026-03-06T00:00:00Z",
+  "note": "Illustrative verification result for documentation purposes."
+}
